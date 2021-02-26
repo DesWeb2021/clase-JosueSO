@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Tiene el atributo, no importa el valor */
+        [name] {
+            background-color: cadetblue;
+        }
+
+        /* Atributo con el valor exacto */
+        [for="name"] {
+            text-transform: uppercase;
+        }
+
+        /* Atributo con la PALABRA en el valor */
+        [alt~="Autónoma"] {
+            height: 50px;
+        }
+
+        /* Atributo que el valor empiece con la PALABRA */
+        [id|="parrafo"] {
+            border: solid 2px red;
+        }
+
+        /* Atributo que el valor empiece con la cadena */
+        [id^="p"] {
+            font-size: 20px;
+        }
+
+        /* Atributo que el valor termina con la cadena */
+        [name$="e"] {
+            margin-left: 20px;
+        }
+
+        /* Atributo que el valor contiene la cadena */
+        [for*="name"] {
+            color: sienna;
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit veniam dolore est quasi quis laboriosam possimus numquam asperiores ab ea explicabo, voluptatibus delectus temporibus. Quas non fugit consequuntur voluptatem dolorem!</p>
+
+    <p id="parrafo-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum vitae tenetur quos accusamus vero totam cumque ipsa doloribus, sunt doloremque, quidem ducimus maxime excepturi a, aspernatur ipsam quae? Animi, at!</p>
+
+    <p id="parrafo-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, libero? Earum nam cupiditate aperiam repudiandae ipsam quas perferendis, qui, facere reprehenderit perspiciatis minus quod. Quod odio deleniti incidunt praesentium eveniet.</p>
+
+    <img src="UASLP Logo.jpg" alt="Universidad Autónoma de San Luis Potosí">
+
+    <form>
+        <label for="name">Nombre</label>
+        <input type="text" name="name">
+        <br>
+        <label for="lastname1">Apellido Paterno</label>
+        <input type="text" name="lastname1">
+        <br>
+        <label for="lastname2">Apellido Materno</label>
+        <input type="text" name="lastname2">
+        <br>
+        <label for="phone">Teléfono</label>
+        <input type="tel" name="phone">
+    </form>
+</body>
+</html>
