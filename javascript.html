@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aux {
+            color: blue;
+            padding: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+
+    <div id="section">
+        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sed accusamus ea, ullam beatae reprehenderit iste commodi ad amet assumenda soluta sunt, corporis ut ipsam, officia vero. Odio, delectus consequatur?</p>
+    </div>
+
+    <img src="UASLP Logo.jpg" alt="UASLP">
+
+    <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur commodi corporis pariatur consequatur nobis, obcaecati sapiente magni perferendis modi? Quam corporis, veniam quia doloremque vero exercitationem eveniet! Doloremque, nam.</p>
+
+    <p id="nuevo">
+
+    </p>
+
+    <script>
+        var section = document.getElementById("section");
+
+        console.log(section.innerHTML);
+        console.log(section.innerText);
+
+        //section.style.color = "blue";
+        section.className = "aux";
+
+        var imagen = document.querySelector("img");
+
+        imagen.setAttribute("src", "UASLP Logo.jpg");
+        console.log(imagen.src);
+
+        imagen.remove();
+
+        var parrafo = document.getElementById("nuevo");
+
+        parrafo.innerHTML = "Este es el <b>nuevo</b> párrafo";
+    </script>
+
+    <script>
+        var w = "A";
+
+        var html = 
+            `<ul>
+                <li>Elemento ${w}</li>
+                <li>Elemento X</li>
+                <li>Elemento Y</li>
+            </ul>`;
+        
+        document.body.innerHTML = document.body.innerHTML + html;
+    </script>
+
+    <!-- <script>
+        var lista = document.createElement("ul");
+
+        var elem_x = document.createElement("li");
+
+        var texto = document.createTextNode("Elemento X");
+
+        elem_x.appendChild(texto);
+
+        lista.appendChild(elem_x);
+
+        var elem_y = document.createElement("li");
+
+        var texto = document.createTextNode("Elemento Y");
+
+        elem_y.appendChild(texto);
+
+        lista.appendChild(elem_y);
+
+        var elem_w = document.createElement("li");
+
+        var texto = document.createTextNode("Elemento W");
+
+        elem_w.appendChild(texto);
+
+        lista.insertBefore(elem_w, elem_x);
+
+        console.log(lista);
+
+        document.body.appendChild(lista);
+    </script> -->
+
+    <!-- <script src="app.js"></script>
+    <script>
+        var x = 1;
+        let z = 5;
+        const pi = 3.1416;
+
+        //Este método imprime en la página
+        //document.write(x);
+
+        //Abre una alerta en el navegador
+        //alert(x);
+
+        //Imprime en la consola del inspeccionador
+        console.log(x);
+        
+        console.log(pi);
+
+        var x = "Uno";
+
+        var suma = x + z;
+
+        console.log(suma);
+
+        console.log(y);
+
+        console.log(Suma(2, 4));
+
+        function Suma(a, b) {
+            return a + b;
+        }
+
+        var section = document.getElementById("section");
+
+        console.log(section);
+
+        var h1 = document.getElementsByTagName("h1");
+
+        console.log(h1[0]);
+
+        var p = document.getElementsByClassName("p");
+
+        console.log(p);
+
+        var query = document.querySelectorAll("div > p");
+
+        console.log(query);
+    </script> -->
+</body>
+</html>
