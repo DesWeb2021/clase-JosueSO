@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="saluda()">Presiona aquí</button>
+
+    <p id="1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt omnis quis dolorum. Laborum autem praesentium voluptatibus cum. Maxime laudantium vero laboriosam. Quidem quasi, modi temporibus qui officiis quibusdam laudantium voluptatibus.
+    </p>
+
+    <p id="2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quis delectus nobis tempore maxime omnis corporis voluptatem consequuntur unde, quisquam fuga ea architecto eum dignissimos aperiam! Assumenda possimus voluptate recusandae.
+    </p>
+
+    <div id="aux"></div>
+
+    <form action="" id="formulario">
+        <label for="username">Nombre de usuario</label>
+        <input type="text" name="username">
+        <br>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass">
+        <br>
+        <input type="submit" value="Iniciar sesión">
+        <button type="submit">Iniciar sesión</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", saluda);
+
+        var p = document.getElementsByTagName("p");
+
+        for (var i = 0; i < p.length; i++) {
+            p[i].addEventListener("mouseover", imprime);
+        };
+
+        function saluda(e) {
+            console.log(e.target);
+
+            console.log("Hola mundo");
+        }
+
+        function imprime(e) {
+            //console.log(e.target);
+            console.log("Sobre el párrafo " + e.target.id);
+        }
+
+        var div = document.getElementById("aux");
+
+        div.innerHTML = "<p onmouseover='imprime()'>Este es un nuevo párrafo</p>";
+
+        var form = document.getElementById("formulario");
+        form.addEventListener("submit", revisaFormulario);
+
+        function revisaFormulario(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            console.log(e);
+
+            console.log("Mandando formulario...");
+        }
+    </script>
+</body>
+</html>
